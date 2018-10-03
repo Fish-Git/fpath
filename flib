@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fxxx  LIBRARY_PATH  "${LIBRARY_PATH}"  "$1"

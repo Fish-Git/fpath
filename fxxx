@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Display individual directories of colon-delimited variable (e.g. $PATH, etc)
+
+fxxx_func()
+{
+  if [[ -z $1 ]]; then
+    local nx0=$(basename "$0")
+    echo "Format: $nx0  varname  \"varvalue\"   [x]"
+    echo "  E.g.  $nx0  PATH     \"\$PATH\"     [x]"
+    echo "  \$3, if non-blank, suppresses blank line at start"
+    return
+  fi
+
+  if [[ -z $3 ]]; then echo ""; fi
+
+  echo "${1}="
+  echo ""
+
+  if [[ -n $2 ]]; then
+
+    while IFS=':' read -ra arDIRS; do
+      for dir in "${arDIRS[@]}"; do
+        if [[ -n $dir ]]; then
+          echo "  ${dir}"
+        fi
+      done
+    done <<< "${2}"
+
+    echo ""
+
+  fi
+}
+
+fxxx_func "$1" "$2" "$3"

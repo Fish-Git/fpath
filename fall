@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo ""
+
+fpath  "x"
+flib   "x"
+finc   "x"

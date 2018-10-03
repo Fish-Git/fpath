@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fxxx  PATH  "$PATH"  "$1"
