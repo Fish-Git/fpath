@@ -1,3 +1,17 @@
 *               text=auto
+
 .gitattributes  text
-*.cmd           text  eol=crlf
+
+fall            text  eol=lf
+finc            text  eol=lf
+flib            text  eol=lf
+fpath           text  eol=lf
+fxxx            text  eol=lf
+
+fall.cmd        text  eol=crlf
+finc.cmd        text  eol=crlf
+flib.cmd        text  eol=crlf
+fpath.cmd       text  eol=crlf
+fxxx.cmd        text  eol=crlf
+
+README.md       text
